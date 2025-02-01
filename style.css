@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pixel', sans-serif;
+    background: url('assets/background/background.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0; /* Hilangkan padding */
+    gap: 0; /* Tidak ada jarak antar elemen */
+}
+
+.judul-game {
+    width: 600px; /* Sesuaikan ukuran judul */
+    margin: -20px 0; /* Jarak negatif antar elemen */
+}
+
+.curut {
+    width: 100px;
+    height: 100px;
+    margin: -10px 0; /* Jarak negatif antar elemen */
+}
+
+.tombol {
+    width: 280px;
+    cursor: pointer;
+    display: block;
+    margin: -50px 0; /* Jarak negatif antar tombol */
+    transition: transform 0.1s, filter 0.2s;
+}
+
+.tombol:hover {
+    filter: brightness(1.2);
+}
+
+.tombol:active {
+    transform: scale(0.95);
+}
+
+

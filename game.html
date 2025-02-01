@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Si Curut!</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div id="game-screen">
+        <div id="status">
+            <p>Level: <span id="level">1</span></p>
+            <p>Poin: <span id="poin">0</span></p>
+        </div>
+    
+        <div id="result">
+            <h1 id="result-text"></h1>
+        </div>
+    
+        <div id="goa-container"></div>
+    
+        <div id="buttons">
+            <button id="menu-button" onclick="location.reload()">Menu</button>
+            <button id="retry-button" onclick="resetGame()">Lagi</button>
+        </div>
+    </div>
+    
+    <!-- Goa ada DI LUAR game-container -->
+    <div id="goa-wrapper">
+        <button id="scroll-left" onclick="scrollGoa(-1)">⟨</button>
+        <div id="goa-container"></div>
+        <button id="scroll-right" onclick="scrollGoa(1)">⟩</button>
+    </div>
+    
+    
+    <script src="game.js"></script>
+</body>
+</html>
