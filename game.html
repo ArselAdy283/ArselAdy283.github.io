@@ -9,8 +9,8 @@
 <body>
     <div id="game-screen">
         <div id="status">
-            <p>Level: <span id="level">1</span></p>
-            <p>Poin: <span id="poin">0</span></p>
+            <span class="label">Level: </span><span class="value" id="level">1</span><br>
+            <span class="label">Poin: </span><span class="value" id="poin">0</span>
         </div>
     
         <div id="result">
@@ -27,11 +27,10 @@
     
     <!-- Goa ada DI LUAR game-container -->
     <div id="goa-wrapper">
-        <button id="scroll-left" onclick="scrollGoa(-1)">⟨</button>
+        <button id="scroll-left" class="scroll-button" onclick="scrollGoa(-1)">⟨</button>
         <div id="goa-container"></div>
-        <button id="scroll-right" onclick="scrollGoa(1)">⟩</button>
+        <button id="scroll-right" class="scroll-button" onclick="scrollGoa(1)">⟩</button>
     </div>
-    
     
     <script src="game.js"></script>
 </body>

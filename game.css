@@ -15,6 +15,20 @@ body {
     padding: 0;
 }
 
+@font-face {
+    font-family: 'Minecraften';
+    src: url("assets/fonts/MinecraftTen-VGORe.ttf") format('truetype'); /* Pastikan path benar */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url("assets/fonts/MinecraftRegular-Bmg3.otf") format('opentype'); /* Gunakan 'opentype' untuk OTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
 #game-screen {
     width: 100vw;
     height: 100vh;
@@ -27,6 +41,7 @@ body {
 }
 
 #status {
+    font-family: 'Minecraft', sans-serif;
     position: absolute;
     top: 20px;
     left: 20px;
@@ -35,7 +50,20 @@ body {
     text-shadow: 2px 2px 4px black;
 }
 
+.label {
+    color: white; /* Warna merah untuk teks "Level" dan "Poin" */
+}
+
+.value {
+    color: white; /* Warna putih untuk angka */
+}
+
+
 #result {
+    font-family: 'Minecraften', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
     display: none;
     position: absolute;
     top: 0%;
@@ -44,7 +72,6 @@ body {
     /*Hanyageserhorizontal*/text-align: center;
     font-size: 24px;
     /*Ukurantekslebihkecil*/font-weight: bold;
-    color: yellow;
     text-shadow: 2px 2px 4px black;
     padding: 10px;
 }
@@ -127,6 +154,41 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+
+#goa-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80vw;
+    overflow: hidden; /* Mencegah goa keluar layar */
+}
+
+#goa-container {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out; /* Efek animasi saat geser */
+}
+
+#scroll-buttons {
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* Supaya tidak mengganggu elemen lain */
+}
+
+#scroll-buttons button {
+    pointer-events: all;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 32px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
 
 @keyframes munculTikus {
     from {
