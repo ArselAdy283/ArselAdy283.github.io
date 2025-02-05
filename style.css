@@ -20,8 +20,20 @@ body {
 }
 
 .judul-game {
-    width: 600px; /* Sesuaikan ukuran judul */
-    margin: -20px 0; /* Jarak negatif antar elemen */
+    width: 600px;
+    /*Sesuaikanukuranjudul*/margin: -20px 0;
+    /*Jaraknegatifantarelemen*/transition: all .5s ease 0s;
+    -webkit-transition:;
+    -moz-transition:;
+    -ms-transition:;
+    -o-transition:;
+}
+.judul-game:hover {
+    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
 }
 
 .curut {
