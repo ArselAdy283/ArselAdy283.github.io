@@ -50,7 +50,11 @@ body {
     text-shadow: 2px 2px 4px black;
 }
 
-.label, .value {
+.label {
+    color: white;
+}
+
+.value {
     color: white;
 }
 
@@ -80,6 +84,7 @@ body {
     gap: 20px;
     margin-top: 20px;
     position: relative;
+    transition: transform 0.3s ease-in-out;
 }
 
 .goa {
@@ -103,7 +108,7 @@ body {
 
 #buttons {
     position: absolute;
-    bottom: 10vh; /* Menaikkan tombol agar tidak tenggelam */
+    bottom: 20px;
     right: 20px;
     display: flex;
     gap: 10px;
@@ -150,15 +155,9 @@ button:active {
     overflow: hidden;
 }
 
-#goa-container {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
 #scroll-buttons {
     position: absolute;
-    bottom: 50%;
+    top: 50%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -173,6 +172,12 @@ button:active {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    opacity: 0.5;
+}
+
+#scroll-left:disabled, #scroll-right:disabled {
+    opacity: 0.2;
+    cursor: default;
 }
 
 @keyframes munculTikus {
@@ -186,20 +191,17 @@ button:active {
     }
 }
 
-/* Media Queries for Mobile Devices */
 @media screen and (max-width: 768px) {
-    #status {
-        font-size: 18px;
+    #buttons {
+        bottom: 50px;
+        right: 50%;
+        transform: translateX(50%);
+        flex-direction: column;
+        align-items: center;
     }
 
-    .goa {
-        width: 150px;
-        height: 150px;
-    }
-
-    .tikus {
-        width: 120px;
-        height: 120px;
+    #retry-button {
+        order: -1;
     }
 
     button {
@@ -207,44 +209,15 @@ button:active {
         height: 60px;
     }
 
-    #goa-wrapper {
-        width: 90vw;
-    }
-
-    #result {
-        font-size: 20px;
-    }
-
-    #buttons {
-        bottom: 15vh; /* Menyesuaikan di layar lebih kecil */
+    #scroll-buttons button {
+        font-size: 24px;
+        padding: 8px 16px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .goa {
-        width: 120px;
-        height: 120px;
-    }
-
-    .tikus {
-        width: 100px;
-        height: 100px;
-    }
-
     button {
         width: 140px;
         height: 50px;
-    }
-
-    #result {
-        font-size: 18px;
-    }
-
-    #status {
-        font-size: 14px;
-    }
-
-    #buttons {
-        bottom: 18vh; /* Lebih tinggi lagi di layar kecil */
     }
 }
