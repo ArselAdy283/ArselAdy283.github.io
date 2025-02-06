@@ -1,7 +1,7 @@
 html, body {
-    overflow: hidden; /* Menghilangkan scroll */
-    height: 100vh; /* Pastikan seluruh layar digunakan */
-    width: 100vw; /* Pastikan lebar penuh */
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
 }
@@ -17,14 +17,14 @@ body {
 
 @font-face {
     font-family: 'Minecraften';
-    src: url("assets/fonts/MinecraftTen-VGORe.ttf") format('truetype'); /* Pastikan path benar */
+    src: url("assets/fonts/MinecraftTen-VGORe.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Minecraft';
-    src: url("assets/fonts/MinecraftRegular-Bmg3.otf") format('opentype'); /* Gunakan 'opentype' untuk OTF */
+    src: url("assets/fonts/MinecraftRegular-Bmg3.otf") format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -37,7 +37,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden; /* Mencegah konten bergeser */
+    overflow: hidden;
 }
 
 #status {
@@ -50,11 +50,7 @@ body {
     text-shadow: 2px 2px 4px black;
 }
 
-.label {
-    color: white;
-}
-
-.value {
+.label, .value {
     color: white;
 }
 
@@ -107,7 +103,7 @@ body {
 
 #buttons {
     position: absolute;
-    bottom: 20px;
+    bottom: 10vh; /* Menaikkan tombol agar tidak tenggelam */
     right: 20px;
     display: flex;
     gap: 10px;
@@ -218,6 +214,10 @@ button:active {
     #result {
         font-size: 20px;
     }
+
+    #buttons {
+        bottom: 15vh; /* Menyesuaikan di layar lebih kecil */
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -242,5 +242,9 @@ button:active {
 
     #status {
         font-size: 14px;
+    }
+
+    #buttons {
+        bottom: 18vh; /* Lebih tinggi lagi di layar kecil */
     }
 }
