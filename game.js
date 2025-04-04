@@ -3,8 +3,10 @@ let poin = 0;
 let goaCount = 2;
 let correctIndex = Math.floor(Math.random() * goaCount);
 let gameOver = false;
-let scrollPosition = 0;
 let cheatMode = false;
+let startX = 0;
+let scrollX = 0;
+let isDragging = false;
 
 function generateGoa() {
     const container = document.getElementById('goa-container');
@@ -28,11 +30,16 @@ function generateGoa() {
     }
 
     correctIndex = cheatMode ? 0 : Math.floor(Math.random() * goaCount);
+
+    checkSwipeAvailability();
+    createSwipeButtons();
 }
 
 function checkGoa(index, div) {
     if (gameOver) return;
     gameOver = true;
+
+    document.querySelectorAll('.tikus').forEach(t => t.style.display = 'none');
 
     const resultText = document.getElementById('result-text');
     const resultContainer = document.getElementById('result');
@@ -81,25 +88,37 @@ function resetGame() {
     generateGoa();
 }
 
-function scrollGoa(direction) {
+function createSwipeButtons() {
     const container = document.getElementById('goa-container');
-    const goaWidth = 220;
-    const maxScroll = (goaCount - 3) * goaWidth;
+    const parent = container.parentElement;
 
-    scrollPosition += direction * goaWidth;
-    if (scrollPosition < 0) scrollPosition = 0;
-    if (scrollPosition > maxScroll) scrollPosition = maxScroll;
+    let leftButton = document.getElementById('swipe-left');
+    let rightButton = document.getElementById('swipe-right');
 
-    container.style.transform = `translateX(-${scrollPosition}px)`;
+    if (!leftButton) {
+        leftButton = document.createElement('button');
+        leftButton.id = 'swipe-left';
+        leftButton.innerText = '<';
+        leftButton.classList.add('swipe-button');
+        leftButton.onclick = () => swipeGoa(-1);
+        parent.appendChild(leftButton);
+    }
+
+    if (!rightButton) {
+        rightButton = document.createElement('button');
+        rightButton.id = 'swipe-right';
+        rightButton.innerText = '>';
+        rightButton.classList.add('swipe-button');
+        rightButton.onclick = () => swipeGoa(1);
+        parent.appendChild(rightButton);
+    }
 }
 
-document.getElementById('scroll-left').onclick = function() {
-    scrollGoa(-1);
-};
-
-document.getElementById('scroll-right').onclick = function() {
-    scrollGoa(1);
-};
+function swipeGoa(direction) {
+    const container = document.getElementById('goa-container');
+    const scrollAmount = 200;
+    container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+}
 
 window.addEventListener("keydown", (event) => {
     if (event.key === "`") {

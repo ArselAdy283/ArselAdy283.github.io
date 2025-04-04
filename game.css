@@ -9,7 +9,7 @@ html, body {
 body {
     text-align: center;
     font-family: 'Press Start 2P', cursive;
-    background: url('assets/background/background.png') no-repeat center center fixed;
+    background: url('assets/background/background_game.gif') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -147,36 +147,65 @@ button:active {
 }
 
 #goa-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Pastikan bisa digeser */
+    white-space: nowrap;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
     position: relative;
-    width: 80vw;
-    overflow: hidden;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    cursor: grab; /* Ubah cursor agar bisa digeser */
 }
 
-#scroll-buttons {
+#goa-wrapper:active {
+    cursor: grabbing;
+}
+
+#goa-container {
+    display: flex;
+    gap: 20px;
+    min-width: 100vw;
+    transition: transform 0.3s ease-in-out;
+    pointer-events: auto; /* Pastikan interaksi bisa dilakukan */
+}
+
+.goa {
+    flex-shrink: 0;
+    width: 220px;
+    height: 220px;
+    background: url("assets/gui/goa.png") center/cover;
+    cursor: pointer;
+}
+
+/* Tombol scroll tetap di layar */
+.scroll-button {
     position: absolute;
     top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none;
-}
-
-#scroll-buttons button {
-    pointer-events: all;
-    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(-50%);
+    z-index: 10; /* Pastikan tombol selalu di atas elemen lain */
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     font-size: 32px;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    opacity: 0.5;
 }
 
+/* Tombol kiri di sisi kiri layar */
+#scroll-left {
+    left: 10px;
+}
+
+/* Tombol kanan di sisi kanan layar */
+#scroll-right {
+    right: 10px;
+}
+
+/* Jika tidak bisa digeser, tombol jadi redup */
 #scroll-left:disabled, #scroll-right:disabled {
-    opacity: 0.2;
+    opacity: 0.3;
     cursor: default;
 }
 
