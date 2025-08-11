@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="assets/gui/logo.png"/>
+
+    <!-- Tailwind Config + CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: {
+                preflight: false // matikan reset bawaan Tailwind
+            },
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="style.css" />
     <title>ArselAdy</title>
 </head>
 <body>
     <div class="fcontainer">
+
+        <!-- navbar -->
         <nav class="wrapper">
             <div class="brand">
                 <div class="logo">
@@ -24,10 +45,14 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+
+        <!-- home -->
         <div class="home">
             <img src="assets/gui/logo.png"/>
             <h1>ArselAdy</h1>
-            <p><br>ijijadifhifhufaeuuhgyfddfbdfbdfbdfbdfbggg<br>guiuguyiggfyfs</p>
+            <p><br>Selamat datang cuy!!! di sini tempat informasi lengkap ArselAdy.<br>Jadi kalian bisa mendapatkan lihat lihat seputar youtubeku atau komunitas yang ku ikuti</p>
+            <button class="bg-transparent border border-white text-white text-base text-bold px-3 py-2 hover:bg-white hover:text-black mt-6">READ MORE ➜</button>
+
         </div>
     </div>
 </body>
