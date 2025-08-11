@@ -1,80 +1,119 @@
+*,
+html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Pixel', sans-serif;
-    background: url('assets/background/background.png') no-repeat center center fixed;
-    background-size: cover;
+    font-family: "Roboto", sans-serif;
+}
+
+.fcontainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100dvh;
+    background-image: url("assets/background/background_campfire.gif");
+}
+
+.fcontainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    min-height: 10px;
+    width: 100%;
+    top: 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    gap: 12px;
+}
+
+.title {
+    color: aliceblue;
+    padding-left: 4px;
+    font-weight: 700;
+}
+
+.logo > img {
+    width: 40px;
+    height: 40px;
+    margin-top: 7px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+} 
+
+.navigation {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-.container {
+.navigation > li {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.navigation > li > a {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.navigation > li > a:hover {
+    color: gold;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation > li > a.active {
+    color: gold;
+}
+
+.home {
+    position: absolute;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    gap: 0;
-    width: 90%; /* Gunakan persentase agar fleksibel */
-    max-width: 600px;
+    color: aliceblue;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
-.judul-game {
-    width: 80%; /* Sesuaikan ukuran agar responsif */
-    max-width: 600px;
-    margin: -10px 0;
-    transition: all 0.5s ease 0s;
+.home > h1 {
+    font-size: 50px;
+    color: gold;
 }
 
-.judul-game:hover {
-    transform: rotate(2deg);
-}
-
-.curut {
-    width: 80px;
-    height: 80px;
-    margin: -10px 0;
-}
-
-.tombol {
-    width: 80%; /* Gunakan persentase untuk fleksibilitas */
-    max-width: 280px;
-    cursor: pointer;
-    display: block;
-    margin: -30px 0;
-    transition: transform 0.1s, filter 0.2s;
-}
-
-.tombol:hover {
-    filter: brightness(1.2);
-}
-
-.tombol:active {
-    transform: scale(0.95);
-}
-
-/* Responsif untuk layar kecil */
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .judul-game {
-        width: 90%;
-        margin: -5px 0;
-    }
-
-    .curut {
-        width: 70px;
-        height: 70px;
-    }
-
-    .tombol {
-        width: 90%;
-        max-width: 200px;
-        margin: -20px 0;
-    }
+.home > img {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
