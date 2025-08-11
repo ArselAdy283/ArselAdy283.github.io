@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/gui/logo.png"/>
-
-    <!-- Tailwind Config + CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             corePlugins: {
-                preflight: false // matikan reset bawaan Tailwind
+                preflight: false
             },
             theme: {
                 extend: {
@@ -21,39 +19,43 @@
             }
         }
     </script>
-
-    <!-- CSS Custom -->
     <link rel="stylesheet" href="style.css" />
     <title>ArselAdy</title>
 </head>
 <body>
-    <div class="fcontainer">
 
-        <!-- navbar -->
-        <nav class="wrapper">
-            <div class="brand">
-                <div class="logo">
-                    <img src="assets/gui/logo.png"/>
-                </div>
-                <div class="title">ArselAdy</div>
+    <!-- NAVBAR -->
+    <nav class="wrapper">
+        <div class="brand">
+            <div class="logo">
+                <img src="assets/gui/logo.png"/>
             </div>
-            <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Content</a></li>
-                <li><a href="#" class="active">Memory</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-
-        <!-- home -->
-        <div class="home">
-            <img src="assets/gui/logo.png"/>
-            <h1>ArselAdy</h1>
-            <p><br>Selamat datang cuy!!! di sini tempat informasi lengkap ArselAdy.<br>Jadi kalian bisa mendapatkan lihat lihat seputar youtubeku atau komunitas yang ku ikuti</p>
-            <button class="bg-transparent border border-white text-white text-base text-bold px-3 py-2 hover:bg-white hover:text-black mt-6">READ MORE ➜</button>
-
+            <div class="title">ArselAdy</div>
         </div>
-    </div>
+        <ul class="navigation">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Content</a></li>
+            <li><a href="#" class="active">Memory</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="home-section">
+        <img src="assets/gui/logo.png"/>
+        <h1>ArselAdy</h1>
+        <p>
+            <br>Selamat datang cuy!!! di sini tempat informasi lengkap ArselAdy.
+            <br>Jadi kalian bisa lihat seputar youtubeku atau komunitas yang ku ikuti
+        </p>
+        <a href="#about" style="border: 1px solid white;" class="bg-transparent text-white text-base font-bold no-underline px-3 py-2 hover:bg-white hover:text-black mt-6">READ MORE ➜</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+        <h1>About</h1>
+        <p>gyyftftftftftfhu.</p>
+    </section>
 </body>
 </html>
