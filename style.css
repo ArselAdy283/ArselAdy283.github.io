@@ -131,3 +131,9 @@ section {
     background-color: #0B0B0B;
     color: white;
 }
+
+.typed-text {
+      font-size: 20px;
+      color: #ffffff;
+      text-shadow: 0 0 10px #fffb00;
+}
