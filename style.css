@@ -132,6 +132,11 @@ section {
     color: white;
 }
 
+.aboutcon {
+    display: flex;
+    align-items: center;
+}
+
 .typed-text {
       font-size: 20px;
       color: #ffffff;
