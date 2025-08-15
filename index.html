@@ -19,7 +19,7 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>ArselAdy</title>
 </head>
 <body>
@@ -54,7 +54,12 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="about-section">
+<section id="about" class="about-section">
+    <!-- Canvas Particles -->
+    <div id="particles-js"></div>
+
+    <!-- Konten About -->
+    <div class="about-content">
         <h1 class="text-4xl">ABOUT</h1>
         <div class="max-w-3xl mx-auto px-6">
             <p class="indent-10 text-justify mt-10 text-lg">
@@ -65,7 +70,10 @@
                 Selain itu, aku juga membagikan tips, trik, dan cerita ringan yang mungkin bisa menginspirasi atau sekadar menghibur kalian di waktu senggang.
             </p>
         </div>
-    </section>
+    </div>
+</section>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         let typed = new Typed("#typed", {

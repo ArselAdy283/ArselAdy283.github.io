@@ -92,7 +92,7 @@ section {
 
 /* Home */
 .home-section {
-    background-image: url("assets/background/background_campfire.gif");
+    background-image: url("/assets/background/background_campfire.gif");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -132,10 +132,29 @@ section {
     color: white;
 }
 
-.aboutcon {
-    display: flex;
-    align-items: center;
+.about-section {
+    position: relative; /* penting biar #particles-js absolute-nya mengacu ke section ini */
+    background-color: #0B0B0B;
+    color: white;
+    overflow: hidden; /* biar canvas gak keluar area */
 }
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* di belakang teks */
+}
+
+.about-content {
+    position: relative;
+    z-index: 1; /* di atas particles */
+    color: white;
+    padding: 20px;
+}
+
 
 .typed-text {
       font-size: 20px;
