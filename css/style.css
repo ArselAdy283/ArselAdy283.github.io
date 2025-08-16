@@ -139,10 +139,10 @@ section {
 }
 
 .about-section {
-    position: relative; /* penting biar #particles-js absolute-nya mengacu ke section ini */
+    position: relative;
     background-color: #0B0B0B;
     color: aliceblue;
-    overflow: hidden; /* biar canvas gak keluar area */
+    overflow: hidden;
 }
 
 #particles-js {
@@ -151,12 +151,12 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* di belakang teks */
+    z-index: 0;
 }
 
 .about-content {
     position: relative;
-    z-index: 1; /* di atas particles */
+    z-index: 1;
     color: aliceblue;
     padding: 20px;
 }
@@ -169,7 +169,7 @@ section {
 }
 
 /* FITUR RESPOSIF */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
 
     .wrapper {
         flex-wrap: wrap;
@@ -203,7 +203,7 @@ section {
     }
 
     nav ul li a:hover {
-        background: rgba(255, 94, 0, 0.2); /* kuning transparan */
+        background: rgba(255, 94, 0, 0.2);
         color: gold;
     }
 
