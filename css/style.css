@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
+    min-height: 40px;
     font-size: 20px;
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -34,19 +34,19 @@ body {
 .brand {
     display: flex;
     align-items: center;
-    font-size: 1.5em;
     gap: 12px;
     transition: all 0.5s ease;
 }
 
 .title {
     color: aliceblue;
-    font-weight: 550;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .logo > img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: auto;
     margin-top: 7px;
     border-radius: 50%;
 }
@@ -66,7 +66,7 @@ body {
 }
 
 .navigation > li > a {
-    color: white;
+    color: aliceblue;
     font-size: 17px;
     font-weight: bold;
     text-decoration: none;
@@ -78,6 +78,12 @@ body {
 .navigation > li > a.active {
     color: gold;
     transition: all 0.3s ease-in-out;
+}
+
+.menu-icon {
+    color: aliceblue;
+    font-size: 25px;
+    display: none;
 }
 
 /* Halaman penuh layar */
@@ -129,13 +135,13 @@ section {
 /* About */
 .about-section {
     background-color: #0B0B0B;
-    color: white;
+    color: aliceblue;
 }
 
 .about-section {
     position: relative; /* penting biar #particles-js absolute-nya mengacu ke section ini */
     background-color: #0B0B0B;
-    color: white;
+    color: aliceblue;
     overflow: hidden; /* biar canvas gak keluar area */
 }
 
@@ -151,13 +157,63 @@ section {
 .about-content {
     position: relative;
     z-index: 1; /* di atas particles */
-    color: white;
+    color: aliceblue;
     padding: 20px;
 }
 
 
 .typed-text {
       font-size: 20px;
-      color: #ffffff;
+      color: aliceblue;
       text-shadow: 0 0 10px #fffb00;
+}
+
+/* FITUR RESPOSIF */
+@media only screen and (max-width: 768px) {
+
+    .wrapper {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    nav.borderhiden {
+        border-bottom: 2px solid gold;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        list-style: none;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        color: white;
+        font-weight: bold;
+        border-radius: 6px;
+    }
+
+    nav ul li a:hover {
+        background: rgba(255, 94, 0, 0.2); /* kuning transparan */
+        color: gold;
+    }
+
+    nav ul.hilang {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
 }
