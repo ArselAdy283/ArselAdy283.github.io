@@ -83,6 +83,7 @@ body {
 .menu-icon {
     color: aliceblue;
     font-size: 25px;
+    margin-top: 10px;
     display: none;
 }
 
