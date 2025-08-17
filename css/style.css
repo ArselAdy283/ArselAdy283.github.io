@@ -134,10 +134,6 @@ section {
 }
 
 /* About */
-.about-section {
-    background-color: #0B0B0B;
-    color: aliceblue;
-}
 
 .about-section {
     position: relative;
@@ -217,4 +213,13 @@ section {
         align-items: center;
         cursor: pointer;
     }
+
+    .home-section {
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
 }
