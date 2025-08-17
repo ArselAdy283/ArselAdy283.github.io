@@ -171,10 +171,11 @@ section {
     .wrapper {
         flex-wrap: wrap;
         align-items: flex-start;
+        background-color: rgba(0, 0, 0, 0.9);
     }
 
     nav.borderhiden {
-        border-bottom: 2px solid gold;
+        border-bottom: 1px solid gold;
     }
 
     nav ul {
@@ -200,7 +201,7 @@ section {
     }
 
     nav ul li a:hover {
-        background: rgba(255, 94, 0, 0.2);
+        background: rgba(255, 94, 0, 0.452);
         color: gold;
     }
 
