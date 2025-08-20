@@ -11,6 +11,7 @@ html {
 }
 
 body {
+    background-color: #0B0B0B;
     overflow-x: hidden;
 }
 
@@ -137,7 +138,6 @@ section {
 
 .about-section {
     position: relative;
-    background-color: #0B0B0B;
     color: aliceblue;
     overflow: hidden;
 }
@@ -158,11 +158,17 @@ section {
     padding: 20px;
 }
 
+.content-section {
+    position: relative;
+    color: aliceblue;
+    overflow: hidden;
+}
+
 
 .typed-text {
       font-size: 20px;
       color: aliceblue;
-      text-shadow: 0 0 10px #fffb00;
+      text-shadow: 0 0 10px gold;
 }
 
 /* FITUR RESPOSIF */
