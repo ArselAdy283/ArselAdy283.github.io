@@ -214,6 +214,7 @@ section {
     }
 
     nav ul li a:hover {
+        background-color: #0d1117;
         border: 1px solid #3c434d;
         color: gold;
     }
