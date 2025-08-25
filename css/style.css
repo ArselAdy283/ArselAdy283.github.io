@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background-color: #0B0B0B;
+    background-color: #01040a;
     overflow-x: hidden;
 }
 
@@ -29,6 +29,7 @@ body {
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
+    border-bottom: 1px solid #3c434d;
     z-index: 1000;
 }
 
@@ -164,7 +165,6 @@ section {
     overflow: hidden;
 }
 
-
 .typed-text {
       font-size: 20px;
       color: aliceblue;
@@ -178,10 +178,6 @@ section {
         flex-wrap: wrap;
         align-items: flex-start;
         background-color: rgba(0, 0, 0, 0.9);
-    }
-
-    nav.borderhiden {
-        border-bottom: 1px solid gold;
     }
 
     nav ul {

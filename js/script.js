@@ -4,7 +4,6 @@ const wrapper = document.getElementById("wrapper");
 
 menuIcon.addEventListener("click", () => {
     menuList.classList.toggle("hilang");
-    wrapper.classList.toggle("borderhiden");
 
     const icon = menuIcon.querySelector("i");
     if (icon.classList.contains("ph-list")) {
