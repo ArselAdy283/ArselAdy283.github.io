@@ -31,6 +31,25 @@ body {
     backdrop-filter: blur(5px);
     border-bottom: 1px solid #3c434d;
     z-index: 1000;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInDown 1.2s ease-out forwards;
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    -o-transform: translateY(-50px);
+    -webkit-animation: fadeInDown 1.2s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
 }
 
 .brand {
@@ -106,6 +125,28 @@ section {
     background-position: center;
     position: relative;
     color: aliceblue;
+}
+
+.home-content {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.2s ease-out forwards;
+    -webkit-animation: fadeInUp 1.2s ease-out forwards;
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    -o-transform: translateY(50px);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
 }
 
 .home-section::before {
