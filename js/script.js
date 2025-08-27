@@ -9,9 +9,11 @@ menuIcon.addEventListener("click", () => {
     if (icon.classList.contains("ph-list")) {
         icon.classList.remove("ph-list");
         icon.classList.add("ph-x");   // ikon close
+        wrapper.classList.add('navbar-scrolled-mobile');
     } else {
         icon.classList.remove("ph-x");
         icon.classList.add("ph-list"); // balik ke hamburger
+        wrapper.classList.remove('navbar-scrolled-mobile');
     }
 });
 
