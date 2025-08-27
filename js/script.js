@@ -14,3 +14,11 @@ menuIcon.addEventListener("click", () => {
         icon.classList.add("ph-list"); // balik ke hamburger
     }
 });
+
+window.addEventListener('scroll', function() {
+    if (this.window.scrollY > 0) {
+        wrapper.classList.add('navbar-scrolled');
+    } else {
+        wrapper.classList.remove('navbar-scrolled');
+    }
+});

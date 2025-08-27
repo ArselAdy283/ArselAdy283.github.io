@@ -27,9 +27,9 @@ body {
     min-height: 40px;
     font-size: 20px;
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid #3c434d;
+    background-color: transparent;
+    backdrop-filter: blur(0);
+    border-bottom: 1px solid transparent;
     z-index: 1000;
     opacity: 0;
     transform: translateY(-50px);
@@ -39,6 +39,11 @@ body {
     -ms-transform: translateY(-50px);
     -o-transform: translateY(-50px);
     -webkit-animation: fadeInDown 1.2s ease-out forwards;
+    transition: background-color 0.2s ease-in-out, backdrop-filter 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, backdrop-filter 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out, backdrop-filter 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out, backdrop-filter 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out, backdrop-filter 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
 }
 
 @keyframes fadeInDown {
@@ -108,6 +113,16 @@ body {
     display: none;
 }
 
+.navbar-scrolled {
+    border-bottom: 1px solid #3c434d;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    transition: border-bottom 0.5s ease-in-out,background-color 0.5s ease-in-out,backdrop-filter 0.5s ease-in-out;
+    -webkit-transition: border-bottom 0.5s ease-in-out,background-color 0.5s ease-in-out,backdrop-filter 0.5s ease-in-out;
+    -moz-transition: border-bottom 0.5s ease-in-out,background-color 0.5s ease-in-out,backdrop-filter 0.5s ease-in-out;
+    -ms-transition: border-bottom 0.5s ease-in-out,background-color 0.5s ease-in-out,backdrop-filter 0.5s ease-in-out;
+    -o-transition: border-bottom 0.5s ease-in-out,background-color 0.5s ease-in-out,backdrop-filter 0.5s ease-in-out;
+}
 /* Halaman penuh layar */
 section {
     height: 100dvh;
