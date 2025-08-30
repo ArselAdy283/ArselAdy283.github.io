@@ -20,8 +20,19 @@ a {
   outline: none; /* Hilangkan outline focus */
 }
 
+div {
+  -webkit-tap-highlight-color: transparent; /* Hilangkan efek highlight di Android/iOS */
+  outline: none; /* Hilangkan outline focus */
+}
+
 a:focus,
 a:active {
+  outline: none;
+  box-shadow: none;
+}
+
+div:focus,
+div:active {
   outline: none;
   box-shadow: none;
 }
