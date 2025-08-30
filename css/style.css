@@ -15,6 +15,11 @@ body {
     overflow-x: hidden;
 }
 
+a {
+  -webkit-tap-highlight-color: transparent; /* Hilangkan efek highlight di Android/iOS */
+  outline: none; /* Hilangkan outline focus */
+}
+
 /* Navbar */
 .wrapper {
     position: fixed;
