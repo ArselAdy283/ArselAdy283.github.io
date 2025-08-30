@@ -331,7 +331,18 @@ section {
 
 .video-grid a {
     text-decoration: none;
+    
 }
+
+.video-stats {
+    color: #fffdfd;
+    display: flex;
+    gap: 30px; 
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
 
 .typed-text {
       font-size: 20px;
@@ -441,6 +452,14 @@ section {
         box-sizing: border-box;
     }
 
+    .video-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex: 1;
+    }
+
     .video-grid img {
         width: 40%;
         max-width: 160px;
@@ -467,11 +486,16 @@ section {
     .video-grid a {
         flex-direction: row;
         padding: 12px;
-        align-items: center;
+        align-items: flex-start;
+    }
+
+    .video-stats {
+        padding-bottom: 20px;
     }
 
     .content-section {
         scroll-margin-top: 50px;
+        margin-bottom: 4px;
         padding-top: 50px;
     }
 }
