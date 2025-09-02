@@ -176,10 +176,10 @@
     <div class="github">
         <h1 style="color: gold;" class="text-4xl bg-[#0d1117] w-[56.5%] py-[10px] mx-auto rounded-[5px]">GitHub <i class="ph ph-github-logo"></i></h1>
         <div class="repositories">
-            <div class="repository1">repo1</div>
-            <div class="repository1">repo2</div>
-            <div class="repository1">repo3</div>
-            <div class="repository1">repo4</div>
+            <div id="repo1" class="repo-card">repo1</div>
+            <div id="repo2" class="repo-card">repo2</div>
+            <div id="repo3" class="repo-card">repo3</div>
+            <div id="repo4" class="repo-card">repo4</div>
         </div>
     </div>
 </section>
@@ -187,6 +187,7 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="/js/typed.js"></script>
 <script src="/js/yt_api.js"></script>
+<script src="/js/github_api.js"></script>
 <script>
     document.getElementById("homeLink").addEventListener("click", function (e) {
         e.preventDefault();
