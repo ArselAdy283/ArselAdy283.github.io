@@ -37,6 +37,14 @@ div:active {
   box-shadow: none;
 }
 
+/* ============VARIABEL=========== */
+:root {
+    --background-tua: #01040a;
+    --background-muda: #0d1117;
+    --background-muda-banget: #151c24;
+    --border: #3c434d;
+}
+
 /* Navbar */
 .wrapper {
     position: fixed;
@@ -137,7 +145,7 @@ div:active {
 }
 
 .navbar-scrolled {
-    border-bottom: 1px solid #3c434d;
+    border-bottom: 1px solid var(--border);
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
     transition: border-bottom 0.5s ease-in-out,background-color 0.5s ease-in-out,backdrop-filter 0.5s ease-in-out;
@@ -247,8 +255,8 @@ section {
     z-index: 1;
     color: aliceblue;
     padding: 20px;
-    background-color: #0d1117;
-    border: 1px solid #3c434d;
+    background-color: var(--background-muda);
+    border: 1px solid var(--border);
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -257,7 +265,7 @@ section {
 }
 
 .about-content h1 {
-    background-color: #151c24;
+    background-color: var(--background-muda-banget);
     width: 94%;
     padding: 10px 0;
     margin: 0 auto;
@@ -271,14 +279,14 @@ section {
 .content-section {
     display: block;
     justify-content: unset;
-    align-items: unset;
+    align-items: center;
     text-align: center;
     scroll-margin-top: 60px;
     padding-top: 60px;
 }
 
 .video h1 {
-    border: 1px solid #3c434d;
+    border: 1px solid var(--border);
 }
 
 .video h1 i {
@@ -295,8 +303,8 @@ section {
 }
 
 .video-grid > div {
-    background: #0d1117;
-    border: 1px solid #3c434d;
+    background: var(--background-muda);
+    border: 1px solid var(--border);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -315,7 +323,7 @@ section {
 
 .video-grid > div:hover {
     scale: 1.05;
-    box-shadow: 0 0 20px #3c434d;
+    box-shadow: 0 0 20px var(--border);
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -371,8 +379,8 @@ section {
 }
 
 .github h1 {
-    border: 1px solid #3c434d;
-    margin-top: 150px;
+    border: 1px solid var(--border);
+    margin-top: 50px;
 }
 
 .github h1 i {
@@ -383,13 +391,13 @@ section {
 .repositories {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px 10px;
+    gap: 40px 10px;
     padding: 50px 50px;
 }
 
 .repositories > div {
-    background: #0d1117;
-    border: 1px solid #3c434d;
+    background: var(--background-muda);
+    border: 1px solid var(--border);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -400,18 +408,17 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: aliceblue;
     font-size: 1.2rem;
     padding: 16px 10px;
 }
 
-.repo-card {
-    background: #151c24;
+.repo-isi {
+    background: var(--background-muda-banget);
     width: 370px;
     border-radius: 12px;
     padding: 16px;
-    color: #e2e8f0;
-    font-family: "Inter", sans-serif;
+    color: aliceblue;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* pisahkan atas & bawah */
@@ -424,27 +431,26 @@ section {
   gap: 6px;
   margin-bottom: 10px;
   font-size: 0.85rem;
-  color: #22d3ee;
 }
 
 .repo-content {
   flex-grow: 1;
 }
 
-.repo-card h2 a {
+.repo-isi h2 {
   color: gold;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-.repo-card .desc {
+.repo-isi .desc {
   display: -webkit-box;
   -webkit-line-clamp: 3;      /* maksimal 3 baris */
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin: 30px 0;
-  color: #a3a3a3;
+  color: aliceblue;
 }
 
 .badge {
@@ -458,27 +464,52 @@ section {
 }
 
 .repo-footer {
-  margin-top: auto;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.stats {
-  font-size: 0.9rem;
-  color: #eab308;
+.repo-footer i {
+    position: relative;
+    font-size: 20px;
+    top: 3px;
 }
 
-.button {
+.stats {
+  font-size: 0.9rem;
+  color: #6e7681;
+}
+
+.repo-button {
   display: block;
   text-align: center;
   padding: 10px;
-  background: #0f172a;
-  border: 1px solid #334155;
+  background: var(--background-muda);
+  border: 1px solid var(--border);
   border-radius: 8px;
   color: #38bdf8;
   text-decoration: none;
   font-size: 0.9rem;
+}
+
+.repo-card:hover {
+    scale: 1.05;
+    box-shadow: 0 0 20px var(--border);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.repo-button:hover {
+    scale: 1.05;
+    box-shadow: 0 0 20px var(--border);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
 
 .typed-text {
@@ -505,7 +536,7 @@ section {
     .navbar-scrolled-mobile {
         background-color: rgba(0, 0, 0, 0.9);
         backdrop-filter: blur(5px);
-        border-bottom: 1px solid #3c434d;
+        border-bottom: 1px solid var(--border);
 }
 
     nav ul {
@@ -525,15 +556,15 @@ section {
     nav ul li a {
         display: block;
         padding: 10px;
-        color: white;
+        color: aliceblue;
         font-weight: bold;
         border-radius: 6px;
         border: 1px solid transparent;
     }
 
     nav ul li a:hover {
-        background-color: #0d1117;
-        border: 1px solid #3c434d;
+        background-color: var(--background-muda);
+        border: 1px solid var(--border);
         color: gold;
     }
 
@@ -634,5 +665,33 @@ section {
         scroll-margin-top: 50px;
         margin-bottom: 4px;
         padding-top: 50px;
+    }
+
+    .repositories {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        padding: 50px 20px;
+        gap: 15px;
+    }
+
+    .repositories div {
+        height: auto;
+        justify-content: center;
+        min-width: unset;
+        width: 100%;
+        max-width: 95%;
+    }
+
+    .repo-isi {
+        max-width: 50%;
+        height: auto;
+        min-height: unset;
+    }
+
+    .repo-isi .desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;      /* maksimal 3 baris */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 }
