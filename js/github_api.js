@@ -1,5 +1,5 @@
 const username = "ArselAdy283";
-const url = `https://api.github.com/users/${username}/repos?sort=updated&per_page=5`;
+const url = `https://api.github.com/users/${username}/repos?sort=updated&per_page=6`;
 
 fetch(url)
   .then(response => response.json())
