@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 forward = true; // ketik lagi setelah kosong
             }
         }
-        setTimeout(animateTitle, 400); // kecepatan animasi
+        setTimeout(animateTitle, 300); // kecepatan animasi
     }
 
     animateTitle();
