@@ -420,7 +420,7 @@ section {
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     min-width: 0;
-    width: 95%;
+    width: 80%;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -434,6 +434,16 @@ section {
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
+}
+
+.minecraft-content .konten:hover {
+    scale: 1.05;
+    box-shadow: 0 0 20px var(--border);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
 
 .minecraft-content div img {
@@ -786,5 +796,32 @@ section {
         /* maksimal 3 baris */
         -webkit-box-orient: vertical;
         overflow: hidden;
+    }
+
+    .minecraft-content .konten {
+        width: 95%;
+    }
+
+    .konten img {
+        width: 40%;
+        max-width: 160px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .minecraft-content p {
+        flex: 1;
+        text-align: left;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
 }
