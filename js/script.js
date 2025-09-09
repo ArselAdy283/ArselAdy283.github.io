@@ -25,31 +25,31 @@ window.addEventListener('scroll', function () {
     }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const text = "ArselAdy"; // teks target
-    let i = 0;
-    let forward = true; // arah animasi (true = nambah, false = hapus)
+// document.addEventListener("DOMContentLoaded", () => {
+//     const text = "ArselAdy"; // teks target
+//     let i = 0;
+//     let forward = true; // arah animasi (true = nambah, false = hapus)
 
-    function animateTitle() {
-        if (forward) {
-            // maju: ketik huruf satu-satu
-            document.title = text.substring(0, i + 1);
-            i++;
-            if (i === text.length) {
-                forward = false; // balik setelah selesai
-                setTimeout(animateTitle, 1000); // jeda sebelum hapus
-                return;
-            }
-        } else {
-            // mundur: hapus huruf satu-satu
-            document.title = text.substring(0, i - 1);
-            i--;
-            if (i === 1) {
-                forward = true; // ketik lagi setelah kosong
-            }
-        }
-        setTimeout(animateTitle, 300); // kecepatan animasi
-    }
+//     function animateTitle() {
+//         if (forward) {
+//             // maju: ketik huruf satu-satu
+//             document.title = text.substring(0, i + 1);
+//             i++;
+//             if (i === text.length) {
+//                 forward = false; // balik setelah selesai
+//                 setTimeout(animateTitle, 1000); // jeda sebelum hapus
+//                 return;
+//             }
+//         } else {
+//             // mundur: hapus huruf satu-satu
+//             document.title = text.substring(0, i - 1);
+//             i--;
+//             if (i === 1) {
+//                 forward = true; // ketik lagi setelah kosong
+//             }
+//         }
+//         setTimeout(animateTitle, 300); // kecepatan animasi
+//     }
 
-    animateTitle();
-});
+//     animateTitle();
+// });
