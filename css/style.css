@@ -824,4 +824,24 @@ section {
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
     }
+
+    .languagegithub {
+        width: 90%;   /* biar nggak kepotong layar */
+        margin: 0 auto;
+    }
+
+    .languagegithub img {
+        width: 100%;
+        height: auto;
+    }
+
+    .statsgithub {
+        width: 90%;   /* samain biar rapih */
+        margin: 20px auto 0;
+    }
+
+    .statsgithub img {
+        width: 100%;
+        height: auto;
+    }
 }
