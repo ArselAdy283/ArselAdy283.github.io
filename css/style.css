@@ -437,7 +437,7 @@ section {
 }
 
 .minecraft-content .konten:hover {
-    scale: 1.05;
+    scale: 1.02;
     box-shadow: 0 0 20px var(--border);
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
