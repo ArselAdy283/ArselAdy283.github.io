@@ -11,8 +11,13 @@ html {
 }
 
 body {
-    background-color: #01040a;
+    background-color: var(--background-tua);
     overflow-x: hidden;
+}
+
+::selection {
+  background: #ffcc00; /* Warna background highlight */
+  color: #000;         /* Warna teks saat di-highlight */
 }
 
 a {
